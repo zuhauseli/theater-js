@@ -1,0 +1,53 @@
+html {
+	font-family: Arial, Helvetica;
+	font-size: 100.1%;
+}
+body {
+	font-size: .7em; /* .75em = 12px */
+	line-height: 1.2em;
+	color: #333;
+}
+
+a,
+a:link,
+a:visited {
+	color:#DC0067! important;
+	text-decoration:none;
+}
+
+a:hover,
+a:active {
+  text-decoration:underline;
+}
+
+ul,
+ol {
+	margin-left: 15px;
+	border:1px solid #CCC;
+}
+
+ul li {
+  list-style-type:disc;
+}
+
+p {
+	border:1px solid #CCC;
+}
+
+ul.list {
+  border:1px solid red;
+}
+
+ol.numlist {
+  border:1px solid green;
+}
+
+/*
+p.paragraph1 {
+  border:1px solid red;
+}
+
+span.red {
+  border:1px solid red;
+}
+*/ 
