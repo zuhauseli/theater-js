@@ -2,26 +2,27 @@
 <html class="no-js" lang="de">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="generator" content="TYPO3 4.6 CMS" />
+		<meta name="keywords" content="keywords" />
+		<meta name="description" content="description" />
+		<link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/resets.css" media="all" />
-		<link rel="stylesheet" type="text/css" href="css/main.css" media="all" />
-		<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
 		<link rel="stylesheet" type="text/css" href="css/990_3_25_25.css" media="all" />
-		<link rel="stylesheet" type="text/css" href="css/debug.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" media="all" />
 		<script src="js/modernizr-2.5.2.js" type="text/javascript"></script>
 		<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
 		<script src="js/jquery-ui-custom.min.js" type="text/javascript"></script>
 		<script src="js/imageteaser.js" type="text/javascript"></script>
+		
 		<title>Theater JS - Image Slider with categories</title>
-		<meta name="keywords" content="keywords" />
-		<meta name="description" content="description" />
+		
 		<script>
 			$(window).load(function() {
-				$('.tx-dcd-imageteaser').theater({
+				$('.theater-js').theater({
 					animationSpeed 		: 1000, 				// how fast animtions are
 					animationEffect 	: 'easeInOutExpo', 		// set your animation effect / available effects: http://ralphwhitbeck.com/demos/jqueryui/effects/easing/
-					timer 				: false, 				// true or false to have the timer
-					advanceSpeed 		: 4000 
+					timer 				: true, 				// true or false to have the timer
+					advanceSpeed 		: 4000,					// if timer is enabled, time between transitions
+					backgroundColor		: '#FFF'				// the background color of theater-js
 				});
 			});
 
@@ -29,10 +30,12 @@
 	</head>
 	<body>
 		<div id="container" class="container_6">
+			<h1>Theater JS</h1>
+			<h2>jQuery imageslider with categories</h2>
 			<div id="innerContainer">
 				<div class="inspirationPanel">
 					<div>
-						<div class="tx-dcd-imageteaser">
+						<div class="theater-js">
 							<div class="switchPanelTop">
 								&nbsp;
 							</div>
@@ -44,92 +47,110 @@
 								<div class="imagesBig">
 									<div class="innerContent" data-category="Cat-1">
 										<div class="additionalInfos">
-											<h1>Aufeinander abgestimmt</h1>
+											<h1>Title 1</h1>
 											<p>
-												Eine gekonnte Planung definiert den Raum als Ganzes und stimmt jedes einzelne Ausstattungsteil, Materialien, Formen und Texturen aufeinander ab. Dies kann auf Kontrasten aufbauen oder harmonischen Gesetzen folgen. Wichtig ist stets die Gesamtwirkung. Und diese beginnt bei der Stimmung des Raumes an sich.
+												Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+											invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+											At vero eos et accusam et justo duo dolores et ea rebum.
 											</p>
 										</div>
 										<img class="image" alt="Kategorie 1" src="img/content/teaser-big_01_11de773074.jpg" width="940" height="464" />
 									</div>
 									<div class="innerContent" data-category="Cat-1">
 										<div class="additionalInfos">
-											<h1>Aufeinander abgestimmt</h1>
+											<h1>Title 2</h1>
 											<p>
-												Eine gekonnte Planung definiert den Raum als Ganzes und stimmt jedes einzelne Ausstattungsteil, Materialien, Formen und Texturen aufeinander ab. Dies kann auf Kontrasten aufbauen oder harmonischen Gesetzen folgen. Wichtig ist stets die Gesamtwirkung. Und diese beginnt bei der Stimmung des Raumes an sich.
+												Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+											invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+											At vero eos et accusam et justo duo dolores et ea rebum.
 											</p>
 										</div>
 										<img class="image" alt="Kategorie 1" src="img/content/march-12-i_love_my_software__70-calendar-1920x1200_70ede70bb0.jpg" width="940" height="464" />
 									</div>
 									<div class="innerContent" data-category="Cat-2">
 										<div class="additionalInfos">
-											<h1>Infobox Titel</h1>
+											<h1>Title 3</h1>
 											<p>
-												Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. S
+												Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+												labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+												et ea rebum.
 											</p>
 										</div>
 										<img class="image" alt="Kategorie 2" src="img/content/january-12-bloody_january__38-calendar-1920x1080_6c2eb6e748.jpg" width="940" height="464" />
 									</div>
 									<div class="innerContent" data-category="Cat-2">
 										<div class="additionalInfos">
-											<h1>Kategorie 2 Bild 2</h1>
+											<h1>Title 4</h1>
 											<p>
-												Kategorie 2 Bild 2
-												<br />
-												Das ist die Beschreibung
+												Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+												invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+												At vero eos et accusam et justo duo dolores et ea rebum.											
 											</p>
 										</div>
 										<img class="image" alt="Kategorie 2" src="img/content/january-12-year_of_the_dragon__44-calendar-1920x12_7a6ee01a5b.jpg" width="940" height="464" />
 									</div>
 									<div class="innerContent" data-category="Cat-3">
 										<div class="additionalInfos">
-											<h1>Test</h1>
+											<h1>Title 5</h1>
 											<p>
-												test
+												Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+												invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+												At vero eos et accusam et justo duo dolores et ea rebum.
 											</p>
 										</div>
 										<img class="image" alt="Kategorie 3" src="img/content/february-12-load_time__88-calendar-1920x1200_ea0fbe8d05.jpg" width="940" height="464" />
 									</div>
 									<div class="innerContent" data-category="Cat-3">
 										<div class="additionalInfos">
-											<h1>www</h1>
+											<h1>Title 6</h1>
 											<p>
-												wwww
+												Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+											invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+											At vero eos et accusam et justo duo dolores et ea rebum.
 											</p>
 										</div>
 										<img class="image" alt="Kategorie 3" src="img/content/december-11-night_snow__19-calendar-1920x1080_e1f2756d61.jpg" width="940" height="464" />
 									</div>
 									<div class="innerContent" data-category="Cat-4">
 										<div class="additionalInfos">
-											<h1>Kategorie 4</h1>
+											<h1>Title 7</h1>
 											<p>
-												Kategorie 4
+												Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+											invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+											At vero eos et accusam et justo duo dolores et ea rebum.
 											</p>
 										</div>
 										<img class="image" alt="Kategorie 4" src="img/content/74832424_89c2f0af94.jpg" width="940" height="464" />
 									</div>
 									<div class="innerContent" data-category="Cat-4">
 										<div class="additionalInfos">
-											<h1>asd</h1>
+											<h1>Title 8</h1>
 											<p>
-												asdf
+												Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+												invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+												At vero eos et accusam et justo duo dolores et ea rebum.
 											</p>
 										</div>
 										<img class="image" alt="Kategorie 4" src="img/content/07_marathon_1_214c4633a2.jpg" width="940" height="464" />
 									</div>
 									<div class="innerContent" data-category="Cat-5">
 										<div class="additionalInfos">
-											<h1>Kategorie 5</h1>
+											<h1>Title Category 5</h1>
 											<p>
-												Kategorie 5
+												Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+												invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+												At vero eos et accusam et justo duo dolores et ea rebum.
 											</p>
 										</div>
 										<img class="image" alt="Kategorie 5" src="img/content/07_solmex_1_fbe80d0acf.jpg" width="940" height="464" />
 									</div>
 									<div class="innerContent" data-category="Cat-5">
 										<div class="additionalInfos">
-											<h1>asdfasdf</h1>
+											<h1>Another Title</h1>
 											<p>
-												asdfasdfasdfasdfds
+												Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+												invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+												At vero eos et accusam et justo duo dolores et ea rebum.
 											</p>
 										</div>
 										<img class="image" alt="Kategorie 5" src="img/content/73504911_5c140400f1.jpg" width="940" height="464" />
@@ -147,9 +168,11 @@
 								<div class="listPictures">
 									<div class="imagePanel" data-category="Cat-1">
 										<img class="image" src="img/content/teaser-big_01_167c4b54fc.jpg" width="230" height="126" alt="" />
-										<h1>Planungsspielraum: Ein Bad für Kinder</h1>
+										<h1>Titel Category One</h1>
 										<p>
-											Rund um die Badewanne sind plane Ablageflächen praktisch – nicht nur für Kinder.
+											Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+											labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+											et ea rebum.
 										</p>
 										<div class="overlay">
 											&nbsp;
@@ -157,9 +180,11 @@
 									</div>
 									<div class="imagePanel" data-category="Cat-2">
 										<img class="image" src="img/content/january-12-bloody_january__38-calendar-1920x1080_463b53cee7.jpg" width="230" height="126" alt="" />
-										<h1>Titel Kategorie 2</h1>
+										<h1>Titel Category Two</h1>
 										<p>
-											Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+											Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+											invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+											At vero eos et accusam et justo duo dolores et ea rebum.
 										</p>
 										<div class="overlay">
 											&nbsp;
@@ -167,9 +192,11 @@
 									</div>
 									<div class="imagePanel" data-category="Cat-3">
 										<img class="image" src="img/content/february-12-load_time__88-calendar-1920x1200_e2bd7676c4.jpg" width="230" height="126" alt="" />
-										<h1>Titel Kat 3</h1>
+										<h1>Titel Category Three</h1>
 										<p>
-											Test
+											Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+											invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+											At vero eos et accusam et justo duo dolores et ea rebum.
 										</p>
 										<div class="overlay">
 											&nbsp;
@@ -177,9 +204,11 @@
 									</div>
 									<div class="imagePanel" data-category="Cat-4">
 										<img class="image" src="img/content/74832424_39036acfd0.jpg" width="230" height="126" alt="" />
-										<h1>Kategorie 4</h1>
+										<h1>Title Category Four</h1>
 										<p>
-											Kategorie 4
+											Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+											invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+											At vero eos et accusam et justo duo dolores et ea rebum.
 										</p>
 										<div class="overlay">
 											&nbsp;
@@ -187,11 +216,11 @@
 									</div>
 									<div class="imagePanel" data-category="Cat-5">
 										<img class="image" src="img/content/07_solmex_1_e9d660119c.jpg" width="230" height="126" alt="" />
-										<h1>Kategorie 5</h1>
+										<h1>Title Category Five</h1>
 										<p>
-											Kategorie 5
-											<br />
-											Test
+											Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+											invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+											At vero eos et accusam et justo duo dolores et ea rebum.
 										</p>
 										<div class="overlay">
 											&nbsp;

@@ -1,4 +1,5 @@
 (function($) {
+
 	function findFirstImage(element) {
 		var element = $(element);
 		elements = element.find('.innerContent');
@@ -44,7 +45,11 @@
 			animationSpeed 		: 1000, 				// how fast animtions are
 			animationEffect 	: 'easeInOutExpo', 		// set your animation effect / available effects: http://ralphwhitbeck.com/demos/jqueryui/effects/easing/
 			timer 				: true, 				// true or false to have the timer
-			advanceSpeed 		: 4000 					// if timer is enabled, time between transitions
+			advanceSpeed 		: 4000,					// if timer is enabled, time between transitions
+			backgroundColor		: '#FFF',				// the background color of theater-js
+			backgroundCategory	: '#000',				// the background of categories
+			backgroundAnimation	: '#000'				// the background in animation by switching the category
+			
 		},
 		
 		timerHTML: '<div class="timer"><span class="pause"></span></div>',
@@ -54,7 +59,7 @@
 			var $imageSlides,
 				imagesLoadedCount = 0;
 			counter = 1; 
-			mySelf = this;			
+			mySelf = this;
 			findFirstImage(element);
 			this.$element = $(element);
 			this.$elements = elements;
@@ -80,13 +85,11 @@
 			//stop timer on mouseover
 			this.$wrapper.mouseenter(function() {
 				//mySelf.stopTimer();
-				//console.log('stop timer');
 			});
 			//start timer on mouse leave
 			this.$wrapper.mouseleave(function() {
 				//mySelf.stopTimer();
 				//mySelf.startTimer();
-				//console.log('start timer mouseleave');
 			});
 
 			this.$element.bind('theater.right', function() {
@@ -145,10 +148,22 @@
 			this.setupAdditionalInfo();
 			this.setupDirectionalNavBottom();		
 			this.$htmlElements.show();
+			this.setPreInformations();
 			if(this.options.timer) {
 				this.setupTimer();
 				this.startTimer();
 			}
+		},
+		
+		setPreInformations :function(){					
+			//set background color
+			$(document).find('#innerContainer').css({'background-color' : this.options.backgroundColor});
+			//set background color of categories
+			$(document).find('.overlay').css({'background-color' : this.options.backgroundCategory});
+			
+			//set background color of animation in category switch
+			$(document).find('.switchPanelBottom, .switchPanelTop').css({'background-color' : this.options.backgroundAnimation});
+			
 		},
 		
 		
@@ -194,7 +209,7 @@
 				mySelf.stopTimer();
 		  }
 		},
-		
+				
 		setupDirectionalNavTop : function() {
 			var mySelf = this;
 			this.$wrapper.find('.picturesBig .slideControllers a.right').click(function() {
@@ -392,7 +407,6 @@
 						}
 						var nextElement = this.$element.find('.imagesBig .innerContent').filter('[data-category=' + next + ']');
 						mySelf.switchCategory(nextElement);						
-						//console.log('Counter: ' +counter +' CatName: '+ next);
 						this.stopTimer();
 						this.startTimer();
 					}
@@ -475,10 +489,8 @@
 						restClick = this.$slidesBottom.length % 4;		
 						this.$slidesBottom.eq(0).addClass('active').find('.overlay').hide();
 					}					
-					//console.log(switchTimes +' / '+this.$slidesBottom.length +' / '+clickCountBottom +' / '+restClick);
 				
-				//only when timer starts
-				
+				//only when timer starts				
 				} else {									
 					if(switchTimes > 0) {						
 						this.$slidesBottom.animate({
@@ -512,7 +524,6 @@
 						}
 						
 					}
-					/*console.log(switchTimes +' / '+this.$slidesBottom.length +' / '+clickCountBottom +' / '+restClick);*/
 				}
 
 			} else if(action == 'left') {
